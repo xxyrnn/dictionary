@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&display=swap');
+
+:root {
+    --first-color: #e1cb2e;
+    --second-color: darkslategray;
+    --third-color: #e4e8ec;
+    --transition: 0.4s ease-in
+}
+
+/* Resets */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: var(--transition);
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Body Starts */
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: var(--third-color);
+    background-color: var(--second-color);
+}
+
+/* Header Starts */
+header {
+    position: sticky;
+    z-index: 1;
+    box-shadow: 0 2px 7px black;
+    padding: 1rem 0;
+    margin-bottom: 3rem;
+}
+
+.firstHeading {
+    font-family: 'Ibarra Real Nova', serif;
+    font-size: 60px;
+    font-weight: 600;
+    text-align: center;
+}
+/* Header Ends */
+
+/* Main Starts */
+.presentation {
+    margin-bottom: 2rem;
+}
+
+p {
+    font-size: 25px;
+    text-align: justify;
+    padding: 0 5rem;
+}
+
+span {
+    color: var(--first-color);
+    font-weight: 600;
+}
+
+/* Form Starts */
+.form {
+    text-align: center;
+    margin: 0 5rem;
+}
+
+form {
+    font-size: 35px;
+}
+
+label {
+    font-weight: 600;
+}
+
+#word {
+    height: 4rem;
+    width: 60%;
+    font-size: 25px;
+    font-family: 'Ibarra Real Nova', serif;
+    text-align: left;
+    border: 3px solid var(--third-color);
+    border-radius: 5px;
+    outline: none;
+    padding: 0 1rem;
+    margin-bottom: 3rem;
+}
+
+#word:focus {
+    border: 3px solid var(--first-color);
+}
+
+button {
+    padding: 1rem 2rem;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    width: 10%;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: var(--first-color);
+}
+/* Form Ends */
+/* Main Ends */
+
+/* Footer Starts */
+footer {
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer div {
+    position: absolute;
+    bottom: 2rem;
+}
+
+a {
+    font-weight: 600;
+    color: #e1cb2e;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    text-shadow: 2px 2px 3px black;
+}
+/* Footer Ends */
+/* Body Ends */

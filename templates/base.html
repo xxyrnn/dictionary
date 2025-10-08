@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Enrico Malaguti Ferrari (xxyrnn)" />
+        <meta name="description" content="A simple online dictionary" />
+        <meta name="keywords" content="dictionary, online dictionary, word definition" />
+
+        <title>{% block title %}{% endblock %} - Online Dictionary</title>
+
+        <!-- Icons -->
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='icons/favicon.ico') }}" />
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    </head>
+
+    <body>
+        <div class="header">
+            <h1 class="title">ONLINE DICTIONARY</h1>
+        </div>
+
+        <div class="main">
+            {% block main %}{% endblock %}
+        </div>
+
+        <div class="footer">
+            <p>Copyright &copy; <span id="year"></span> Online Dictionary</p>
+            <p>My Social Links:</p>
+            <ul>
+                <li><a href="https://github.com/xxyrnn" target="_blank">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/#" target="_blank">LinkedIn</a></li>
+                <li><a href="https://www.instagram.com/maybe_enrico" target="_blank">Instagram</a></li>
+                <!-- <li><a href="https://twitter.com/yourprofile" target="_blank">Twitter</a></li> -->
+                <!-- <li><a href="https://facebook.com/yourprofile" target="_blank">Facebook</a></li> -->
+            </ul>
+        </div>
+    </body>
+</html>

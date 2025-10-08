@@ -12,16 +12,20 @@ def index():
 
 import re
 
-def sanitize_data(data):
+def sanitize_data(data: str) -> str | None:
     data = data.strip()
 
-    if re.match(r"^[a-zA-Z]+$", data):
+    if re.match(r"\B[a-zA-Z]+\b", data):
         return data
 
-    return ""
+    return None
 
 @app.route("/definition")
 def definition():
     if request.method == "GET":
         word = sanitize_data(request.args.get("word"))
-        return render_template("definition.html", word=word)
+
+        if word:
+            return render_template("definition.html", word=word)
+
+    return render_template("404.html")

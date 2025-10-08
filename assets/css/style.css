@@ -31,7 +31,7 @@ body {
 }
 
 /* Header Starts */
-header {
+.header {
     position: sticky;
     z-index: 1;
     box-shadow: 0 2px 7px black;
@@ -39,7 +39,7 @@ header {
     margin-bottom: 3rem;
 }
 
-.firstHeading {
+.title {
     font-family: 'Ibarra Real Nova', serif;
     font-size: 60px;
     font-weight: 600;
@@ -112,14 +112,14 @@ button:hover {
 /* Main Ends */
 
 /* Footer Starts */
-footer {
+.footer {
     font-size: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-footer div {
+.footer div {
     position: absolute;
     bottom: 2rem;
 }

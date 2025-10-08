@@ -48,7 +48,7 @@ body {
 /* Header Ends */
 
 /* Main Starts */
-.presentation {
+.intro {
     margin-bottom: 2rem;
 }
 
@@ -73,10 +73,6 @@ form {
     font-size: 35px;
 }
 
-label {
-    font-weight: 600;
-}
-
 #word {
     height: 4rem;
     width: 60%;
@@ -94,7 +90,7 @@ label {
     border: 3px solid var(--first-color);
 }
 
-button {
+input[type=submit] {
     padding: 1rem 2rem;
     font-size: 20px;
     text-align: center;
@@ -104,7 +100,7 @@ button {
     width: 10%;
 }
 
-button:hover {
+input[type=submit]:hover {
     cursor: pointer;
     background-color: var(--first-color);
 }

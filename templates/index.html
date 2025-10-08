@@ -1,40 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="author" content="Enrico Malaguti Ferrari (xxyrnn)" />
+{% block title %}Home{% endblock %}
+{% block main %}
+    <div class="intro">
+        <p>We decided to create this site because...<br /><br /><br /><br /><br /><br /></p>
+    </div>
 
-        <title>Online Dictionary</title>
+    <div class="form">
+        <form name="search_word" action="/definition" method="get">
+            <input type="text" name="word" id="word" placeholder="Type your word..." /><br />
 
-        <!-- Website Icon -->
-        <link rel="icon" type="image/x-icon" src="assets/images/icons/#" />
-
-        <!-- CSS -->
-        <link rel="stylesheet" href="assets/css/style.css" /> 
-    </head>
-
-    <body>
-        <div class="header">
-            <h1 class="title">ONLINE DICTIONARY</h1>
-        </div>
-
-        <div class="main">
-            <div class="presentation">
-                <p>We decided to create this site because...<br /><br /><br /><br /><br /><br /></p>
-            </div>
-
-            <div class="form">
-                <form name="search_word" action="receiver.php" method="post">
-                    <label for="word">Search Here</label><br />
-                    <input type="text" name="word" id="word" placeholder="Search Your Word Here..." /><br />
-                
-                    <button type="submit" name="submit-btn" id="submit-btn">Submit</button>
-                </form>
-            </div>
-        </div>
-
-        <!-- JS -->
-        <script type="javascript" src="assets/js/#"></script>
-    </body>
-</html>
+            <input type="submit" name="submit-btn" id="submitBtn" value="Submit" />
+        </form>
+    </div>
+{% endblock %}

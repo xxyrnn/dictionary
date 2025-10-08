@@ -1,32 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+{% block title %}Definition{% endblock %}
+{% block main %}
+    <div class="definition">
+        <p>{{ word }}</p>
+    </div>
 
-        <title>Online Dictionary</title>
-
-        <!-- CSS -->
-        <link rel="stylesheet" href="static/css/style.css" />
-
-        <!-- JavaScript -->
-        <script type="JavaScript" src="static/js/#"></script>
-
-        <!-- Website Icon -->
-    </head>
-
-    <body>
-        <header>
-            <h1 class="firstHeading">ONLINE DICTIONARY</h1>
-        </header>
-
-        <main>
-            <p>{{s}}: {{d}}</p>
-        </main>
-
-        <footer>
-            Click here to go back to <a href="index.html">home page</a>
-        </footer>
-    </body>
-</html>
+    <div class="go-back">
+        <p>Click <a href="/">HERE</a> to return to home page</p>
+    </div>
+{% endblock %}

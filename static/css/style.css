@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&display=swap');
 
 :root {
     --first-color: #e1cb2e;
     --second-color: darkslategray;
     --third-color: #e4e8ec;
-    --transition: 0.4s ease-in
+    --transition: 0.4s ease-in;
+    --border-radius: 10px;
 }
 
 /* Resets */
@@ -32,11 +33,14 @@ body {
 
 /* Header Starts */
 .header {
+    background-color: var(--third-color);
+    color: var(--second-color);
     position: sticky;
     z-index: 1;
-    box-shadow: 0 2px 7px black;
     padding: 1rem 0;
-    margin-bottom: 3rem;
+    margin: 1rem 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 10px #111;
 }
 
 .title {
@@ -77,7 +81,8 @@ form {
     height: 4rem;
     width: 60%;
     font-size: 25px;
-    font-family: 'Ibarra Real Nova', serif;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
     text-align: left;
     border: 3px solid var(--third-color);
     border-radius: 5px;

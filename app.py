@@ -23,7 +23,7 @@ def sanitize_data(data: str) -> str | None:
 @app.route("/definition")
 def definition():
     if request.method == "GET":
-        word = sanitize_data(request.args.get("word"))
+        word = sanitize_data(request.args.get("word")) # type: ignore
 
         if word:
             return render_template("definition.html", word=word)

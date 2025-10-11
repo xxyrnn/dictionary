@@ -4,12 +4,12 @@
 
 {% block main %}
     <div class="intro">
-        <p>We decided to create this site because...<br /><br /><br /><br /><br /><br /></p>
+        <p>I decided to create this website because...<br /><br /><br /><br /><br /><br /></p>
     </div>
 
     <div class="form">
         <form name="search_word" action="/definition" method="get">
-            <input type="text" name="word" id="word" placeholder="Type your word..." /><br />
+            <input id="word" name="word" type="text" placeholder="Type your word..." required />
 
             <input type="submit" name="submit-btn" id="submitBtn" value="Submit" />
         </form>

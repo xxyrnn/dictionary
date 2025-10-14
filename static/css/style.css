@@ -3,13 +3,15 @@
 
 :root {
     --first-color: #e1cb2e;
-    --second-color: darkslategray;
+    --second-color: #2f4f4f;
     --third-color: #e4e8ec;
-    --transition: 0.4s ease-in;
+    --shadow-color: #111;
+    --transition: 0.3s ease-in-out;
     --border-radius: 10px;
+    --font-size: 25px;
 }
 
-/* Resets */
+/* resets */
 * {
     padding: 0;
     margin: 0;
@@ -17,12 +19,12 @@
     transition: var(--transition);
 }
 
-/* Smooth Scrolling */
+/* smooth scrolling */
 html {
     scroll-behavior: smooth;
 }
 
-/* Body Starts */
+/* body */
 body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
@@ -31,7 +33,7 @@ body {
     background-color: var(--second-color);
 }
 
-/* Header Starts */
+/* header */
 .header {
     background-color: var(--third-color);
     color: var(--second-color);
@@ -40,7 +42,7 @@ body {
     padding: 1rem 0;
     margin: 1rem 1rem;
     border-radius: var(--border-radius);
-    box-shadow: 0 0 10px #111;
+    box-shadow: 0 0 10px var(--shadow-color);
 }
 
 .title {
@@ -49,15 +51,14 @@ body {
     font-weight: 600;
     text-align: center;
 }
-/* Header Ends */
 
-/* Main Starts */
+/* main */
 .intro {
     margin-bottom: 2rem;
 }
 
 p {
-    font-size: 25px;
+    font-size: var(--font-size);
     text-align: justify;
     padding: 0 5rem;
 }
@@ -67,52 +68,46 @@ span {
     font-weight: 600;
 }
 
-/* Form Starts */
+/* form */
 .form {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 0 5rem;
 }
 
-form {
-    font-size: 35px;
-}
-
-#word {
-    height: 4rem;
-    width: 60%;
-    font-size: 25px;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 500;
+input[type=text] {
+    font-family: inherit;
+    font-size: var(--font-size);
     text-align: left;
     border: 3px solid var(--third-color);
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     outline: none;
-    padding: 0 1rem;
+    padding: 1rem;
     margin-bottom: 3rem;
 }
 
-#word:focus {
+input[type=text]:focus {
     border: 3px solid var(--first-color);
 }
 
 input[type=submit] {
-    padding: 1rem 2rem;
-    font-size: 20px;
+    font-family: inherit;
+    font-size: var(--font-size);
     text-align: center;
     text-decoration: none;
-    border: none;
-    border-radius: 8px;
-    width: 10%;
+    padding: 1rem 2rem;
+    border: 3px solid var(--third-color);
+    border-radius: var(--border-radius);
 }
 
 input[type=submit]:hover {
     cursor: pointer;
     background-color: var(--first-color);
+    border: 3px solid var(--first-color);
 }
-/* Form Ends */
-/* Main Ends */
 
-/* Footer Starts */
+/* footer */
 .footer {
     font-size: 25px;
     display: flex;
@@ -132,8 +127,6 @@ a {
 }
 
 a:hover {
-    color: white;
-    text-shadow: 2px 2px 3px black;
+    color: var(--third-color);
+    text-shadow: 0 0 10px var(--shadow-color);
 }
-/* Footer Ends */
-/* Body Ends */

@@ -15,7 +15,7 @@ import re
 def sanitize_data(data: str) -> str | None:
     data = data.strip().lower()
 
-    if re.match(r"\B[a-z]+\b", data):
+    if re.match(r"^[a-z]+$", data):
         return data
 
     return None

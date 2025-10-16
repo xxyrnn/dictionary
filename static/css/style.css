@@ -27,6 +27,7 @@ html {
 /* body */
 body {
     font-family: 'Open Sans', sans-serif;
+    font-size: var(--font-size);
     font-weight: 300;
     letter-spacing: 1px;
     color: var(--third-color);
@@ -47,14 +48,14 @@ body {
 
 .title {
     font-family: 'Ibarra Real Nova', serif;
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 600;
     text-align: center;
 }
 
 /* main */
-.intro {
-    margin-bottom: 2rem;
+.word {
+    margin-left: 5rem;
 }
 
 p {
@@ -63,7 +64,7 @@ p {
     padding: 0 5rem;
 }
 
-span {
+span:not(#year) {
     color: var(--first-color);
     font-weight: 600;
 }
@@ -73,18 +74,20 @@ span {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 input[type=text] {
     font-family: inherit;
     font-size: var(--font-size);
     text-align: left;
+    padding: 1rem;
     border: 3px solid var(--third-color);
     border-radius: var(--border-radius);
     outline: none;
-    padding: 1rem;
-    margin-bottom: 3rem;
 }
 
 input[type=text]:focus {
@@ -109,13 +112,10 @@ input[type=submit]:hover {
 
 /* footer */
 .footer {
-    font-size: 25px;
     display: flex;
     align-items: center;
-    justify-content: center;
-}
-
-.footer div {
+    justify-content: space-around;
+    width: 100%;
     position: absolute;
     bottom: 2rem;
 }

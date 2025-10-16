@@ -20,11 +20,21 @@ def sanitize_data(data: str) -> str | None:
 
     return None
 
+import sqlite3
+
 @app.route("/definition", methods=["GET"])
 def definition():
     word = sanitize_data(request.args.get("word")) # type: ignore
 
     if word:
-        return render_template("definition.html", word=word)
+        conn = sqlite3.connect("dictionary.db")
+        cursor = conn.cursor()
+        cursor.execute("SELECT def FROM words WHERE word = ?", (word,))
+        result = cursor.fetchone()
+        conn.close()
+
+        if result:
+            definition = result[0]
+            return render_template("definition.html", word=word, definition=definition)
 
     return render_template("404.html")

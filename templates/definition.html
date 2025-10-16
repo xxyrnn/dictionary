@@ -4,10 +4,11 @@
 
 {% block main %}
     <div class="definition">
-        <p>{{ word }}</p>
+        <h1 class="word">{{ word|capitalize }}</h1>
+        <p class="definition">{{ definition }}</p>
     </div>
 
     <div class="go-back">
-        <p>Click <a href="/">HERE</a> to return to home page</p>
+        <p>Click <a href="/">HERE</a> to go back to the home page</p>
     </div>
 {% endblock %}
